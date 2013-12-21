@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+    "http://struts.apache.org/dtds/struts-config_1_3.dtd"
+>
+<struts-config>
+    <action-mappings>
+    	<action path="/dbms/tags/insert"
+	type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.tags.InsertAction" />
+    	<action path="/dbms/tags/find"
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.tags.FindAction"/>
+    	<action path="/dbms/tags/rename"
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.tags.RenameAction"/>
+    	<action path="/dbms/tags/delete"
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.tags.DeleteAction"/>
+    	<action path="/dbms/tags/list-all"
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.tags.QueryAllAction">
+    			</action>
+    	<action path="/dbms/tags/list-usedbybookmark"
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.tags.QueryUsedByBookmarkAction">
+    			</action>
+    	<action path="/dbms/tags/list-unusedbybookmark"
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.tags.QueryUnusedByBookmarkAction">
+    			</action>
+
+    	<action path="/dbms/bookmarks/insert"
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.bookmarks.InsertAction"/>
+    	<action path="/dbms/bookmarks/load"
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.bookmarks.LoadAction"/>
+    	<action path="/dbms/bookmarks/findbyurl"
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.bookmarks.FindByUrlAction"/>
+    	<action path="/dbms/bookmarks/update"
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.bookmarks.UpdateAction"/>
+    	<action path="/dbms/bookmarks/delete"
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.bookmarks.DeleteAction"/>
+    	<action path="/dbms/bookmarks/list-untagged"
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.bookmarks.QueryUntaggedAction"/>
+    	<action path="/dbms/bookmarks/list-bytag"
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.bookmarks.QueryByTagAction"/>
+    	<action path="/dbms/bookmarks/list-byurlpattern"
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.bookmarks.QueryByUrlPatternAction"/>
+
+    	<action path="/dbms/bookmarktags/add"
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.bookmarktags.AddTagToBookmarkAction"/>
+    	<action path="/dbms/bookmarktags/delete"
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.bookmarktags.DeleteTagFromBookmarkAction"/>
+    	<action path="/dbms/bookmarktags/delete-all"
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.bookmarktags.DeleteAllTagsFromBookmarkAction"/>
+    </action-mappings>
+
+	<message-resources parameter="messages" null="false"/>
+
+	<plug-in className="it.webalice.alexcoppo.strutsutils.HibernatePlugIn"/>
+</struts-config>
