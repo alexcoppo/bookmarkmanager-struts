@@ -6,7 +6,7 @@
 <struts-config>
     <action-mappings>
     	<action path="/dbms/tags/insert"
-	type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.tags.InsertAction" />
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.tags.InsertAction" />
     	<action path="/dbms/tags/find"
     			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.tags.FindAction"/>
     	<action path="/dbms/tags/rename"
@@ -14,14 +14,11 @@
     	<action path="/dbms/tags/delete"
     			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.tags.DeleteAction"/>
     	<action path="/dbms/tags/list-all"
-    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.tags.QueryAllAction">
-    			</action>
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.tags.QueryAllAction"/>
     	<action path="/dbms/tags/list-usedbybookmark"
-    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.tags.QueryUsedByBookmarkAction">
-    			</action>
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.tags.QueryUsedByBookmarkAction"/>
     	<action path="/dbms/tags/list-unusedbybookmark"
-    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.tags.QueryUnusedByBookmarkAction">
-    			</action>
+    			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.tags.QueryUnusedByBookmarkAction"/>
 
     	<action path="/dbms/bookmarks/insert"
     			type="it.webalice.alexcoppo.bookmarksmanager_struts.dbmsapi.bookmarks.InsertAction"/>
