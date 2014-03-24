@@ -87,7 +87,7 @@ public class TagDAO {
 		HibernateSessionHelper hsh = new HibernateSessionHelper(request);
 		
 		if (hsh.isOpen()) {
-            Query q = hsh.getSession().getNamedQuery("Tag.allByTagAsc");
+            Query q = hsh.getSession().getNamedQuery(queryName);
             results = q.list();
         }
 		hsh.close();
