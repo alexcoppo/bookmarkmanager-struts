@@ -40,7 +40,7 @@ var checkIfTagExists = function(newTag) {
 	var result;
 	
 	ajaxJsonRequest(
-		JSPVARS.dbmsTagFind + "?tag=" + newTag,
+		JSPVARS.dbmsTagFind + "?tag=" + encodeURIComponent(newTag),
 		function(data) {
 			if (data.error !== undefined)
 				result = data.error;
@@ -57,7 +57,7 @@ var doInsertTag = function(newTag) {
 	var result;
 	
 	ajaxJsonRequest(
-		JSPVARS.dbmsTagInsert + "?tag=" + newTag,
+		JSPVARS.dbmsTagInsert + "?tag=" + encodeURIComponent(newTag),
 		function(data) {
 			if (data.error !== undefined)
 				result = data.error;
@@ -74,7 +74,7 @@ var doRenameTag = function(id, renameTag) {
 	var result;
 	
 	ajaxJsonRequest(
-		JSPVARS.dbmsTagRename + "?id=" + id + "&tag=" + renameTag,
+		JSPVARS.dbmsTagRename + "?id=" + id + "&tag=" + encodeURIComponent(renameTag),
 		function(data) {
 			if (data.error !== undefined)
 				result = data.error;
